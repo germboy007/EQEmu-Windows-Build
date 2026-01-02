@@ -1,0 +1,22 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 19,
+    "patch": 0
+  },
+  "configurePresets": [
+	{
+      "name": "win-msvc",
+      "displayName": "Windows MSVC (VS 2022)",
+      "generator": "Visual Studio 17 2022",
+	  "binaryDir": "${sourceDir}/out/build/",
+      "architecture": { "value": "x64" },
+      "cacheVariables": {
+        "CMAKE_CONFIGURATION_TYPES": "Debug;Release",
+		"EQEMU_BUILD_LOGIN": "ON",
+		"EQEMU_BUILD_TESTS": "Off"
+      }
+    }
+  ]
+}
